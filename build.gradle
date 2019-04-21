@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+    // https://github.com/melix/jmh-gradle-plugin
+    id "me.champeau.gradle.jmh" version "0.4.8"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+// here you can override jmh versions used by jmh plugin
+//    jmh 'org.openjdk.jmh:jmh-core:1.+'
+//    jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.+'
+    jmh 'org.apache.commons:commons-lang3:3.+'
+}
+
+jmh {
+//    jvmArgs = ['-Djmh.ignoreLock=true']
+}
